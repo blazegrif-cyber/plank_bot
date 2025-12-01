@@ -12,7 +12,7 @@ import random
 import json
 import os
 
-TOKEN = "8245220100:AAGz31sjwsTbFTZByAG6UnSoQj08MojcI0Q"
+TOKEN = os.getenv("TOKEN")
 USERS_FILE = "users.json"
 
 # -------------------------
@@ -131,3 +131,4 @@ job_queue.run_daily(send_reminder, dt_time(hour=23, minute=0))
 
 print("Бот запущен!")
 app.run_polling()
+
